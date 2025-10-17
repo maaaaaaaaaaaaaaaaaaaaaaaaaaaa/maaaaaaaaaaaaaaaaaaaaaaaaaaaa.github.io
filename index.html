@@ -31,7 +31,10 @@
     }
 
     main {
-      max-width: 900px;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 20px;
+      max-width: 1200px;
       margin: 2rem auto;
       padding: 1rem;
     }
@@ -41,7 +44,6 @@
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       padding: 1.5rem;
-      margin-bottom: 2rem;
     }
 
     section h2 {
@@ -62,19 +64,34 @@
       margin-top: 2rem;
     }
 
-    /* 반응형 스타일 */
-    @media (max-width: 600px) {
+    /* 반응형 스타일 태블릿사이즈 */
+    @media (max-width: 768px) {
       header h1 {
         font-size: 1.5rem;
       }
       section {
         padding: 1rem;
       }
+      main{
+        grid-template-columns: auto auto;
+      gap: 15px;
+      }
+    }
+    /* 모바일버전 */
+    @media (max-width: 480px) {
+      main{
+        grid-template-columns: auto;
+      }
     }
   </style>
 </head>
 <body>
   <header>
+    <h2>
+      <a href="/">HOME</a>
+      <a href="./code1010.html">파이썬</a>
+    </h2>
+    <hr>
     <h1>안녕하세요! 저는 초등학교 6학년이에요 🌱</h1>
     <p>식물을 좋아하고, <span class="highlight">로블록스</span> 게임을 제일 좋아해요 🎮</p>
   </header>
